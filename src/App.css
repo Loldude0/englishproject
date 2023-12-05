@@ -1,7 +1,10 @@
 .App {
-  position: relative;
-  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   color: white;
+  height: 100vh;
 }
 
 .App::before {
@@ -15,6 +18,13 @@
   background-size: cover;
   filter: blur(2px);
   z-index: -1;
+}
+
+.centered-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 body::-webkit-scrollbar, html::-webkit-scrollbar {

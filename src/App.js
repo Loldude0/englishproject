@@ -1,42 +1,45 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import { FullPage, Slide } from 'react-full-page';
-import { Canvas, useLoader, extend } from 'react-three-fiber';
-import { Text, MeshWobbleMaterial, Html } from '@react-three/drei';
-import { FontLoader } from 'three';
-import * as THREE from 'three';
-extend({ MeshWobbleMaterial });
 
 function App() {
   return (
     <div className="App">
       <FullPage>
         <Slide>
-          <div>
-            <Canvas>
-              <ambientLight />
-              <pointLight position={[10, 10, 10]} />
-              <Text
-                color="white"
-                anchorX="center"
-                anchorY="middle"
-                rotation={[-0.5, -0.5, 0]}
-                depth={0.5}
-                font="./OpenSans.ttf"
-                children="hello world"
-              >
-                {(nodes, materials) => (
-                  <mesh material={materials}>
-                    <shapeBufferGeometry args={[nodes]} />
-                  </mesh>
-                )}
-              </Text>
-            </Canvas>
+          <div className="centered-content">
+            <h1>Artificial Intelligence and the Future of Work</h1>
+            <p>(I'm working on 3d text, effects, transitions, images, and more cool features you won't see on a normal website)</p>
           </div>
         </Slide>
         <Slide>
-          <div>
-            <h1>Section 2</h1>
+          <div className="centered-content">
+            <h1>But wait, what even is Artificial Intelligence?</h1>
+          </div>
+        </Slide>
+        <Slide>
+          <div className="centered-content">
+            <h1>Artificial Intelligence is a technology capable of performing non-routine, cognitive tasks that typically requires human intelligence</h1>
+          </div>
+        </Slide>
+        <Slide>
+          <div className="centered-content">
+            <h1>//TODO: insert embeds of current AI models that the user of the website can try out</h1>
+          </div>
+        </Slide>
+        <Slide>
+          <div className="centered-content">
+            <h1>Soo...does that mean our jobs are in danger because AI will be able to perform all the tasks we can?</h1>
+          </div>
+        </Slide>
+        <Slide>
+          <div className="centered-content">
+            <h1>No! AI will complement human capabilities and push society further ahead. Furthermore, Artificial Intelligence will create new jobs with a different set of skills in creativity, problem-solving, and emotional intelligence that are yet to be discovered.</h1>
+          </div>
+        </Slide>
+        <Slide>
+          <div className="centered-content">
+            <h1>//TODO: give proof and stuff that AI isn't actually a danger in the next 2-3 slides</h1>
           </div>
         </Slide>
       </FullPage>
