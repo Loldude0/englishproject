@@ -1,5 +1,29 @@
 .App {
-  text-align: center;
+  position: relative;
+  height: 100vh;
+  color: white;
+}
+
+.App::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url('./endless-constellation.svg') no-repeat center center fixed;
+  background-size: cover;
+  filter: blur(2px);
+  z-index: -1;
+}
+
+body::-webkit-scrollbar, html::-webkit-scrollbar {
+  display: none;
+}
+
+body, html {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
 }
 
 .App-logo {
@@ -32,7 +56,13 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.App-background {
+  height: 100vh;
+  filter: blur(2px);
 }
